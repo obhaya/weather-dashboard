@@ -1,0 +1,158 @@
+/* General body styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+/* Container for the entire layout */
+.container {
+    display: flex;
+    width: 100%;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 160px;
+    background-color: #45a049;
+    color: white;
+    padding: 20px;
+    height: 100vh;
+}
+
+/* Sidebar heading styling */
+.sidebar h1 {
+    margin: 0 0 20px;
+    font-size: 24px; /* Increase font size for better readability */
+}
+
+/* Sidebar link styling */
+.pages a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin: 10px 0; /* Add more spacing between links */
+    font-size: 16px; /* Increase font size */
+}
+
+/* Main content area */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+/* Search container styling */
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+/* Input field styling */
+#userQuery {
+    width: 250px; /* Increase the width of the input field */
+    padding: 12px;
+    margin-right: 10px;
+    font-size: 14px; /* Increase font size */
+}
+
+/* Charts container */
+.charts-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Add space between charts */
+}
+
+/* Styling for chart canvases */
+canvas {
+    width: 320px !important; /* Increase canvas width */
+    height: 240px !important; /* Increase canvas height */
+}
+
+/* Weather widget styling */
+.weather-widget {
+    padding: 20px;
+    border-radius: 10px;
+    color: white; /* Default text color */
+    transition: background-color 0.5s ease;
+}
+
+.sunny {
+    background-color: #ffcc00; /* Sunny */
+}
+
+.cloudy {
+    background-color: #aab8c2; /* Cloudy */
+}
+
+.rainy {
+    background-color: #3a6070; /* Rainy */
+}
+
+.overcast {
+    background-color: #7a7a7a; /* Overcast */
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* Adjust sidebar for smaller screens */
+    .sidebar {
+        width: 100px; /* Reduce width */
+        padding: 10px; /* Adjust padding */
+    }
+
+    .sidebar h1 {
+        font-size: 20px; /* Decrease font size */
+    }
+
+    .pages a {
+        font-size: 14px; /* Decrease font size */
+    }
+
+    /* Main content area padding */
+    .main-content {
+        padding: 10px; /* Adjust padding */
+    }
+
+    /* Search container styling */
+    .search-container {
+        flex-direction: column; /* Stack elements vertically */
+        align-items: center;
+    }
+
+    #userQuery {
+        width: 100%; /* Full width on smaller screens */
+        margin-right: 0; /* Remove right margin */
+        margin-bottom: 10px; /* Add bottom margin */
+    }
+
+    /* Adjust charts layout for smaller screens */
+    .charts-container {
+        flex-direction: column; /* Stack charts vertically */
+        gap: 10px; /* Reduce gap */
+    }
+
+    canvas {
+        width: 100%; /* Full width for charts */
+        height: auto; /* Maintain aspect ratio */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .sidebar {
+        display: none; /* Hide sidebar */
+    }
+
+    .main-content {
+        padding: 5px; /* Reduce padding */
+    }
+
+    #userQuery {
+        width: 90%; /* Almost full width */
+    }
+
+    /* Optionally adjust other elements as needed */
+}

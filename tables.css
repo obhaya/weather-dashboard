@@ -1,0 +1,219 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container styling */
+.container {
+    display: flex;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 200px;
+    background-color: #4CAF50; /* Green */
+    padding: 20px;
+    height: 100vh; /* Full height */
+}
+
+.sidebar h2 {
+    color: white;
+}
+
+.sidebar a {
+    display: block;
+    color: white;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.sidebar a:hover {
+    background-color: #45a049; /* Darker green */
+}
+
+/* Main content styling */
+.main-content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+/* General headings styling */
+h1 {
+    margin-bottom: 20px;
+}
+
+/* Table container styling */
+.table-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+}
+
+/* Table styling */
+.table-container table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+.table-container th,
+.table-container td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+.table-container th {
+    background-color: #f2f2f2;
+}
+
+.table-container tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Pagination styling */
+.pagination {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+.pagination button:hover {
+    background-color: #45a049;
+}
+
+/* Chatbot container styling */
+.chatbot-container {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.chatbot-container h2 {
+    margin-bottom: 10px;
+}
+
+.chatbot-container input {
+    width: 70%;
+    padding: 10px;
+    margin-right: 10px;
+}
+
+.chatbot-container button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.chatbot-container button:hover {
+    background-color: #45a049;
+}
+
+.chatbot-container #chatbotResponse {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 4px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    /* Adjust container to stack vertically */
+    .container {
+        flex-direction: column;
+    }
+
+    /* Sidebar adjustments */
+    .sidebar {
+        width: 100%;
+        height: auto; /* Auto height for smaller screens */
+    }
+
+    .sidebar h2 {
+        font-size: 18px; /* Adjust font size */
+    }
+
+    .sidebar a {
+        font-size: 14px; /* Adjust font size */
+    }
+
+    /* Main content padding */
+    .main-content {
+        padding: 15px;
+    }
+
+    /* Table container styling */
+    .table-container {
+        padding: 15px;
+    }
+
+    /* Adjust pagination alignment */
+    .pagination {
+        justify-content: center;
+    }
+
+    /* Chatbot container adjustments */
+    .chatbot-container input {
+        width: 100%; /* Full width on smaller screens */
+        margin-bottom: 10px;
+    }
+
+    .chatbot-container button {
+        width: 100%; /* Full width for better touch interaction */
+    }
+}
+
+@media (max-width: 480px) {
+    /* Further adjustments for very small screens */
+    .sidebar {
+        display: none; /* Optionally hide sidebar */
+    }
+
+    /* Main content adjustments */
+    .main-content {
+        padding: 10px;
+    }
+
+    h1 {
+        font-size: 22px; /* Adjust heading size */
+    }
+
+    .table-container {
+        padding: 10px;
+    }
+
+    .chatbot-container {
+        padding: 10px;
+    }
+
+    .chatbot-container input {
+        width: 100%;
+    }
+
+    .pagination button {
+        padding: 8px 12px; /* Adjust button size */
+    }
+}
+
